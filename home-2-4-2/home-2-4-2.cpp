@@ -21,13 +21,19 @@ public:
         in >> town >> street >> house >> room;
     }
 
-    void sort(adress* addresses, int size) {
-        getTown ()
-            if (addresses[0] > (addresses[1])
-    }
+    
 };
 
-
+void sort(adress* adressMassiv, int size) {
+   
+    for (int i = 0; i < size - 1; ++i) {
+        for (int j = 0; j < size - 1; ++j) {
+            if (adressMassiv[j].getTown() > adressMassiv[j + 1].getTown()) {
+                std::swap(adressMassiv[j], adressMassiv[j + 1]);
+            }
+        }
+    }
+}
 
 int main() {
     setlocale(LC_ALL, "Russian");
